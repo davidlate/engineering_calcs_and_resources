@@ -69,7 +69,7 @@ class Plotting:
         ax.set_yticks(yticks)
         fig.set_size_inches(8,6)
         #fig.colorbar()
-        plt.suptitle("{:} Density, Ideal Gas Law vs CoolProp".format(fluid), fontsize=11)
+        plt.suptitle("{:} Density, Ideal Gas Law vs Real-Gas from CoolProp".format(fluid), fontsize=11)
         plt.title(r'Value shown: $\frac{\rho_{IdealGasLaw}-\rho_{CoolProp}}{\rho_{CoolProp}}$ * 100%', fontsize=9)
         plt.xticks(rotation=60)
         plt.xlabel("Pressure [PSIA]")
