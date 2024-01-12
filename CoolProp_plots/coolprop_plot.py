@@ -21,6 +21,7 @@ class Convert:
         return Pa
 
 class Calc:
+
     def findRhoCoolProp_kg_m3(temp_K, press_Pa, fluid):
         rho = PropsSI('D', 'T',temp_K, 'P',press_Pa,fluid)
         return rho
@@ -41,9 +42,8 @@ class Calc:
 
 class Plotting: 
 
-    def plotIdealGasErrPercent():
-        fluid = "Nitrogen"
-        R = 296.80
+    def plotIdealGasErrPercent(fluid, R):
+
         T_F      = np.arange(-40, 122, 2)
         P_psia   = np.arange(1, 6025, 25)
 
@@ -81,4 +81,6 @@ class Plotting:
 
 if __name__ == '__main__':
 
-    Plotting.plotIdealGasErrPercent()
+    fluid = "Nitrogen"
+    R = 296.80
+    Plotting.plotIdealGasErrPercent(fluid=fluid, R=R)
